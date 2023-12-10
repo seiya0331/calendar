@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.order(created_at: :desc)
     @blog = Blog.new
   end
 
@@ -39,7 +39,7 @@ class BlogsController < ApplicationController
   private
 
   def blog_parameter
-    params.require(:blog).permit(:title, :content, :start_time)
+    params.require(:blog).permit(:title, :content, :start_time, :mileage)
   end
-  
+
 end

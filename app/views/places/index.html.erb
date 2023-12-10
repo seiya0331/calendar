@@ -1,0 +1,28 @@
+<div class="continer">
+  <div class="row my-3 ml-5">
+  <h4 style="background-color: #dcdcdc;">予定履歴</h4>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-10 px-sm-0 offset-sm-1">
+      <table class="table">
+        <thead>
+          <tr bgcolor="#dcdcdc">
+            <th>場所</th>
+            <th>日程</th>
+            <th>時間</th>
+            <th>走行距離(km)</th>
+          </tr>
+        </thead>
+        <% @blogs.each do |blog| %>
+        <tr>
+          <td><%= blog.title %></td>
+          <td><%= blog.start_time.strftime("%m-%d") %></td>
+          <td><%= blog.start_time.strftime("%H:%M") %></td>
+          <td><%= blog.mileage %>km</td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

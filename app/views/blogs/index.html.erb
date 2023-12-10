@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <div class="toppage">
-  <h1 class="top">カレンダー</h1>
+  <h1 class="top">ツーリングカレンダー</h1>
+  <p><%= link_to places_path do %></p>
+   予定履歴
+  <% end %>
 <br>
 
   <div class="row">
@@ -10,8 +13,10 @@
         <table class="table">
           <thead class="thead-light">
             <tr>
-              <th>タイトル</th>
+              <th>場所</th>
               <th>日程</th>
+              <th>時間</th>
+              <th>走行距離（km）</th>
             </tr>
           </thead>
 
@@ -20,6 +25,8 @@
               <tr>
                 <td><%= link_to blog.title , blog %></td>
                 <td><%= blog.start_time.strftime("%m-%d") %></td>
+                <td><%= blog.start_time.strftime("%H:%M") %></td>
+                <td><%= blog.mileage  %>km</td>
               </tr>
             <% end %>
           </tbody>
@@ -28,7 +35,7 @@
         <%= form_with(model: @blog, local: true) do |form| %>
 
         <div class="title">
-          <div class="form-tag">タイトル</div>
+          <div class="form-tag">場所</div>
             <%= form.text_field :title %>
           </div>
 
@@ -36,6 +43,11 @@
           <div class="content">
             <div class="form-tag">内容</div>
               <%= form.text_field :content %>
+          </div>
+
+          <div class="mileage">
+            <div class="form-tag">走行距離（km）</div>
+              <%= form.text_field :mileage %>
           </div>
 
           <div class="time">

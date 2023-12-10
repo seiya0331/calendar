@@ -1,4 +1,6 @@
-<%= form_with(model: @blog, local: true) do |form| %>
+<div class="continer">
+  <div class="row my-3 ml-5">
+  <%= form_with(model: @blog, local: true) do |form| %>
 
   <div class="title">
     <div class="form-tag">タイトル</div>
@@ -11,7 +13,12 @@
     <%= form.text_field :content %>
   </div>
 
-    <div class="time">
+  <div class="mileage">
+    <div class="form-tag">走行距離</div>
+    <%= form.text_field :mileage %>
+  </div>
+
+  <div class="time">
     <div class="form-tag">時間</div>
     <%= form.datetime_select :start_time %>
   </div>
@@ -21,4 +28,6 @@
     <%= form.submit %>
   </div>
 
-<% end %>
+  <% end %>
+  </div>
+</div>

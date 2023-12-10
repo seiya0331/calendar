@@ -1,24 +1,28 @@
-# README
+# claendar
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+### サイトテーマ
 
-* Ruby version
+ツーリング用のカレンダーです。
 
-* System dependencies
+### テーマを選んだ理由
 
-* Configuration
+趣味のバイクに乗ることで予定や行ったことある場所を記録できるカレンダーがあったら
+過去に行ったことのある場所や名前を忘れてしまうことがあったのでカレンダーに記録していると
+忘れてしまってもこのカレンダーがあれば大丈夫！
 
-* Database creation
+### ターゲットユーザ
+- バイクでツーリングする人
 
-* Database initialization
+### 主な利用シーン
+- ツーリング予定を決める時
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS : Linux(CentOS)
+- 言語 : HTML,CSS,SQL
+- フレームワーク : Ruby on Rails
+- JSライブラリ : jQuery
+- IDE : Cloud9
